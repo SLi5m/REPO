@@ -1,0 +1,35 @@
+{% extends "users/base2.html" %}
+{% load static %}
+{% block content %}
+  <div class="content-section">
+    <form method="POST" action="{% url 'login' %}" class="login-form">
+        <div class="logo-banner">
+            <img src="{% static 'repo/images/logo3.png' %}"/>
+        </div>
+
+        <div class="txtb">
+            <input type="text" name="username">
+            <span data-placeholder="Username"></span>
+        </div>
+        <div class="txtb">
+            <input type="password" name="password">
+            <span data-placeholder="Password"></span>
+        </div>
+
+        <input type="submit" class="logbtn" value="Login">
+
+        <div class="remember-me">
+            <input type="checkbox">&nbsp;&nbsp; Remember Me
+        </div>
+
+        <div class="bottom-text">
+            Don't have an account? <a href="{% url 'register' %}"><i class="fa fa-sign-in"></i>&nbsp;&nbsp;Sign Up</a>
+        </div>
+
+        <div class="bottom-texts">
+            T&C's apply
+        </div>
+    </form>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block content %}
+      <div >
+        <img  src="{{ user.profile.image.url }}">
+        <div>
+          <h2>{{ user.username }}</h2>
+          <p>{{ user.email }}</p>
+        </div>
+      </div>
+  
+{% endblock content %}
